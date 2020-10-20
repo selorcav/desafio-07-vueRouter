@@ -13,7 +13,9 @@
         </div>
         </div>
     </nav>
-    <router-view></router-view>
+    <transition name="v8vue">
+      <router-view></router-view>
+    </transition>
   </div>
   
 </template>
@@ -33,5 +35,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.v8vue-enter-active,
+.v8vue-leave-active {
+  transition: opacity 0.8s ;
+}
+.v8vue-enter,
+.v8vue-leave-to {
+  opacity: 0;
 }
 </style>
